@@ -23,6 +23,13 @@ function adicionar() {
 }
 
 function sortear() {
+    //Ter o mínimo de amigos para o sorteio fazer sentido.
+    if (amigos.length < 4) {
+        alert('Adicione pelo menos 4 amigos!');
+        return;
+        
+    }
+
     embaralha(amigos);
     let sorteio = document.getElementById('lista-sorteio');
    

@@ -2,6 +2,13 @@ let amigos = [];
 
 function adicionar() {
     let amigo = document.getElementById('nome-amigo');
+
+    //Não permitir que adicione valores vazios na lista de amigos.
+    if (amigo.value == ''){
+        alert('Informe o nome do amigo!');
+        return;
+    }
+
     let lista = document.getElementById('lista-amigos');
     amigos.push(amigo.value);
     if (lista.textContent == ''){

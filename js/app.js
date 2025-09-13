@@ -8,6 +8,12 @@ function adicionar() {
         alert('Informe o nome do amigo!');
         return;
     }
+    //Não permitir que adicione o mesmo nome mesmo se estiver algum caractere maiusculo
+    let nomeDigitado = amigo.value.toLowerCase();
+    if (amigos.some(nomeExistente => nomeExistente.toLowerCase() === nomeDigitado)) {
+         alert('Nome já existente!');
+        return;
+    }
 
     let lista = document.getElementById('lista-amigos');
     amigos.push(amigo.value);
